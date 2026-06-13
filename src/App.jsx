@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar";
 import ProductList from "./pages/ProductList";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
-import productDetail from "./pages/productDetail";
 import Footer from "./components/Footer";
+import ProductDetail from "./pages/productDetail";
 import OrderConfermation from "./pages/OrderConfermation";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -18,12 +18,12 @@ const App = () => {
 
           <Routes>
             <Route path="/" element={<ProductList />} />
-            <Route path="/prduct/:id" element={<productDetail />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
 
-          <Footer />
+          <Footer /> 
         </div>
       </Router>
     </>

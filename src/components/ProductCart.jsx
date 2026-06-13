@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {ShoppingCart} from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 const ProductCart = ({ product }) => {
-  console.log("my data", product);
   return (
     <>
       <div className="bg-gray-900 rounded-2xl shadow-xl overflow-hidden flex  flex-col h-full transition duration-500 transform border border-gray-800 group hover:scale-[1.03] hover:shadow-orange-900/40  ">
         <Link
-          to={"/product"}
+          to={`/product/${product.id}`}
           className=" relative cursor-pointer overflow-hidden"
         >
           <img
@@ -23,7 +22,7 @@ const ProductCart = ({ product }) => {
         </Link>
 
         <div className="p-5 flex flex-col grow ">
-          <Link to={"/product"}>
+          <Link to={`/product/${product.id}`}>
             <h3 className="text-xl font-bold  text-white mb-2 cursor-pointer hover:text-orange-400 transition duration-200 line-clamp-1">
               {product.name}
             </h3>
@@ -40,7 +39,7 @@ const ProductCart = ({ product }) => {
 
           <div className="">
             <button className="flex items-center justify-center space-x-2  transform hover:ring-4 mx-auto w-full py-3 bg-orange-600 text-white font-bold rounded-full shadow-lg shadow-orange-800/50 cursor-pointer hover:bg-orange-700 transition duration-300  ">
-              <ShoppingCart/>
+              <ShoppingCart className="w-5 h-5" />
               <span>Add to Cart </span>
             </button>
           </div>
