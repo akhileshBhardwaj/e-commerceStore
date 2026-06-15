@@ -4,7 +4,7 @@ import ProductList from "./pages/ProductList";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Footer from "./components/Footer";
-import ProductDetail from "./pages/productDetail";
+import ProductDetail from "./pages/ProductDetail";
 import OrderConfermation from "./pages/OrderConfermation";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/checkout" element={<Checkout />} />
           </Routes>
 
-          <Footer /> 
+          <Footer />
         </div>
       </Router>
     </>
